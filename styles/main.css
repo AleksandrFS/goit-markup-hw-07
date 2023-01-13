@@ -699,6 +699,7 @@ margin-bottom: 0;
     align-items: center;
     flex-wrap: wrap;
     row-gap: 48px;
+    margin-bottom: 48px;
 }
 .projects-list .item {
     border: 1px solid #E7E9FC;
@@ -1147,6 +1148,7 @@ fill: var(--btn-filter-hover-color);
 
     .filter-list {
         justify-content: center;
+        margin: 64px 0;
     }
 
     .btn-filter {
@@ -1155,6 +1157,7 @@ fill: var(--btn-filter-hover-color);
     .projects-list {
         flex-direction: unset;
         column-gap: 24px;
+        margin-bottom: 96px;
     }
     .projects-list .item {
         width: calc((100% - 24px) / 2);
@@ -1317,9 +1320,16 @@ fill: var(--btn-filter-hover-color);
         align-items: start;
         flex-wrap: nowrap;
     }
+    .projects-list {
+        margin-bottom: 120px;
+    }
 
     .projects-list .item {
         width: calc((100% - 24px * 2) / 3)
+    }
+    .filter-list {
+        margin-top: 96px;
+        margin-bottom: 72px;
     }
     .media {
         text-align: left;
