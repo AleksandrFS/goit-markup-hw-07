@@ -173,11 +173,17 @@ img {
         border: none;
         padding: 0;
         line-height: 0;
-    }
-    .mobile-menu-open-icon {
         fill: var(--tile-text-color);
+        transition: fill var(--transition);
+    }
+    .mobile-menu-open-btn:hover,
+    .mobile-menu-open-btn:focus {
+        fill: var(--acent-color);
     }
     .mobile-menu {
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
         position: fixed;
         z-index: 101;
         top: 0;
@@ -200,6 +206,7 @@ img {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        margin-bottom: auto;
         height: 100%;
     }
     .current {
@@ -235,11 +242,15 @@ img {
     fill: var(--primary-bgd-color);
     }
     .mobile-menu.is-open {
+        visibility: visible;
+        opacity: 1;
+        pointer-events: all;
         transform: translateX(0);
     }
     /* .mobile-scroll {
         overflow-y: scroll;
     } */
+
     .site-nav-mobile {
         margin-bottom: 40px;
     }
@@ -273,6 +284,7 @@ img {
     .link-auth-tel {
         display: inline-block;
         font-size: 36px;
+        margin-left: auto;
         margin-bottom: 40px;
         color: var(--primary-text-color);
         line-height: 1.11;
@@ -298,7 +310,7 @@ img {
     .links-nav-mobile {
         display: flex;
         align-items: center;
-        gap: 56px;
+        gap: calc((100% - 56px * 3) / 4);
     }
     /* .link-mobile-item {
         margin-right: clamp(10px, 25vw, 56px);
@@ -968,12 +980,11 @@ fill: var(--btn-filter-hover-color);
 /*=================================Header=================================*/
 
 @media screen and (max-width: 381px) {
+
     .link-auth-tel {
-        font-size: 24px;
+        font-size: 8.5vw;
     }
-    .links-nav-mobile {
-        gap: 20px;
-    }
+
     .modal {
         max-width: 392px;
         width: 90%;
@@ -1335,10 +1346,12 @@ fill: var(--btn-filter-hover-color);
         text-align: left;
     }
     .footer-web-media {
+        gap: 0;
         margin-bottom: 0;
+        margin-right: 80px;
     }
     .media-footer {
-        margin-right: 80px;
+        
         margin-bottom: 0;
     }
 
